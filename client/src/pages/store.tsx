@@ -10,6 +10,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Droplets, Star, ShoppingCart, Check } from "lucide-react";
 import type { Product } from "@shared/schema";
 import { useState } from "react";
+import { getProductImage } from "@/lib/product-images";
 
 function ProductCard({ product }: { product: Product }) {
   const { addToCart, isAdding } = useCart();
@@ -31,8 +32,8 @@ function ProductCard({ product }: { product: Product }) {
     <Card className="overflow-hidden bg-card border-border hover:border-primary/30 transition-all group h-full flex flex-col" data-testid={`card-product-${product.id}`}>
       <Link href={`/store/${product.slug}`} className="block">
         <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center relative overflow-hidden">
-          {product.imageUrl ? (
-            <img src={product.imageUrl} alt={product.name} className="w-full h-full object-cover" />
+          {getProductImage(product.imageUrl) ? (
+            <img src={getProductImage(product.imageUrl)} alt={product.name} className="w-full h-full object-cover" />
           ) : (
             <Droplets className="h-12 w-12 text-primary/30" />
           )}

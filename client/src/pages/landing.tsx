@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import type { Product } from "@shared/schema";
 import { useState } from "react";
+import io2CanImage from "@assets/io2-can-original.jpg";
+import { getProductImage } from "@/lib/product-images";
 
 export default function Landing() {
   const { data: products } = useQuery<Product[]>({ queryKey: ["/api/products"] });
@@ -81,7 +83,7 @@ export default function Landing() {
               <div className="relative w-72 md:w-96">
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl scale-110" />
                 <img
-                  src="https://io2-water.vercel.app/assets/io2-can-original.jpg"
+                  src={io2CanImage}
                   alt="iO2 Water Can"
                   className="relative w-full h-auto drop-shadow-2xl"
                   data-testid="img-hero-can"

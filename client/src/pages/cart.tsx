@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Minus, Plus, Trash2, ShoppingCart, ArrowRight, Droplets } from "lucide-react";
+import { getProductImage } from "@/lib/product-images";
 
 export default function Cart() {
   const { items, subtotal, itemCount, updateQuantity, removeItem } = useCart();
@@ -46,8 +47,8 @@ export default function Cart() {
                     <Card key={item.id} className="p-5 bg-card border-border" data-testid={`card-cart-item-${item.id}`}>
                       <div className="flex gap-4">
                         <div className="w-20 h-20 bg-muted rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
-                          {item.product?.imageUrl ? (
-                            <img src={item.product.imageUrl} alt={item.product.name} className="w-full h-full object-cover" />
+                          {getProductImage(item.product?.imageUrl) ? (
+                            <img src={getProductImage(item.product?.imageUrl)} alt={item.product?.name} className="w-full h-full object-cover" />
                           ) : (
                             <Droplets className="h-8 w-8 text-primary/30" />
                           )}

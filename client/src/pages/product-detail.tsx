@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator";
 import { Droplets, Star, Minus, Plus, ShoppingCart, Truck, Shield, RefreshCw, CheckCircle2 } from "lucide-react";
 import type { Product, Review } from "@shared/schema";
 import { useState } from "react";
+import { getProductImage } from "@/lib/product-images";
 
 export default function ProductDetail() {
   const params = useParams();
@@ -76,8 +77,8 @@ export default function ProductDetail() {
           <div className="grid md:grid-cols-2 gap-12">
             {/* Image */}
             <div className="aspect-square bg-gradient-to-br from-muted to-muted/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
-              {product.imageUrl ? (
-                <img src={product.imageUrl} alt={product.name} className="w-full h-full object-cover" />
+              {getProductImage(product.imageUrl) ? (
+                <img src={getProductImage(product.imageUrl)} alt={product.name} className="w-full h-full object-cover" />
               ) : (
                 <Droplets className="h-24 w-24 text-primary/30" />
               )}

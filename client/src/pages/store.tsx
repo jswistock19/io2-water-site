@@ -30,8 +30,12 @@ function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="overflow-hidden bg-card border-border hover:border-primary/30 transition-all group h-full flex flex-col" data-testid={`card-product-${product.id}`}>
       <Link href={`/store/${product.slug}`} className="block">
-        <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center relative">
-          <Droplets className="h-12 w-12 text-primary/30" />
+        <div className="aspect-[4/3] bg-gradient-to-br from-muted to-muted/50 flex items-center justify-center relative overflow-hidden">
+          {product.imageUrl ? (
+            <img src={product.imageUrl} alt={product.name} className="w-full h-full object-cover" />
+          ) : (
+            <Droplets className="h-12 w-12 text-primary/30" />
+          )}
           <div className="absolute top-3 left-3 flex flex-col gap-1.5">
             {product.badge && (
               <Badge className="bg-primary text-primary-foreground text-xs whitespace-nowrap w-fit">{product.badge}</Badge>

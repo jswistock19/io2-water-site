@@ -129,6 +129,7 @@ if (!productCount || productCount.count === 0) {
       comparePrice: 4.99,
       category: "singles",
       benefit: "performance",
+      imageUrl: "/assets/io2-large-bottle.png",
       badge: "Best Seller",
       rating: 4.9,
       reviewCount: 2847,
@@ -145,6 +146,7 @@ if (!productCount || productCount.count === 0) {
       price: 2.99,
       category: "singles",
       benefit: "recovery",
+      imageUrl: "/assets/io2-can-original.jpg",
       rating: 4.8,
       reviewCount: 1923,
       stock: 800,
@@ -160,6 +162,7 @@ if (!productCount || productCount.count === 0) {
       price: 5.99,
       category: "singles",
       benefit: "nightlife",
+      imageUrl: "/assets/io2-slim-can.png",
       badge: "New",
       rating: 4.7,
       reviewCount: 843,
@@ -176,6 +179,7 @@ if (!productCount || productCount.count === 0) {
       price: 4.99,
       category: "singles",
       benefit: "brain",
+      imageUrl: "/assets/io2-glass-bottle.png",
       rating: 4.8,
       reviewCount: 1256,
       stock: 400,
@@ -186,6 +190,7 @@ if (!productCount || productCount.count === 0) {
     {
       name: "iO2 Athlete Pack",
       slug: "athlete-pack",
+      imageUrl: "/assets/io2-hero-lineup.png",
       description: "12-pack of 500ml Performance Bottles. The preferred choice of professional athletes and trainers. Stock your fridge, gym, or training facility. Each bottle delivers 25mg/L dissolved oxygen through our patented MohrO2 process.",
       shortDescription: "12x 500ml Performance Bottles — save 17%",
       price: 39.99,
@@ -203,6 +208,7 @@ if (!productCount || productCount.count === 0) {
     {
       name: "iO2 Recovery Bundle",
       slug: "recovery-bundle",
+      imageUrl: "/assets/io2-can-original.jpg",
       description: "24-pack of 355ml Recovery Cans. Perfect for teams, gyms, and serious athletes. Bulk pricing with maximum savings. Each can delivers the same patented oxygen infusion in a convenient, portable format.",
       shortDescription: "24x 355ml Recovery Cans — save 16%",
       price: 59.99,
@@ -220,6 +226,7 @@ if (!productCount || productCount.count === 0) {
     {
       name: "iO2 Starter Kit",
       slug: "starter-kit",
+      imageUrl: "/assets/io2-hero-lineup.png",
       description: "Try all 4 iO2 formulas plus 2 bonus bottles. The perfect introduction to oxygen-enriched hydration. Includes: 2x Performance, 1x Recovery, 1x Brain Boost, 1x Nightlife Shot, and 1 bonus flavor. Discover your favorite.",
       shortDescription: "6-variety sampler — try every formula",
       price: 24.99,
@@ -237,6 +244,7 @@ if (!productCount || productCount.count === 0) {
     {
       name: "iO2 Monthly Subscription",
       slug: "monthly-subscription",
+      imageUrl: "/assets/io2-hero-lineup.png",
       description: "24 bottles delivered monthly. Subscribe and save 20% vs. one-time purchase. Free shipping on every delivery. Pause, skip, or cancel anytime. Includes a free iO2 branded water bottle with your first delivery.",
       shortDescription: "24 bottles/month — save 20% + free shipping",
       price: 49.99,

@@ -48,48 +48,61 @@ export default function Landing() {
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-transparent" />
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-primary/10 rounded-full blur-3xl opacity-50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24 md:pt-32 md:pb-32">
-          <div className="text-center max-w-4xl mx-auto">
-            <Badge variant="outline" className="mb-6 border-primary/30 text-primary font-medium px-4 py-1.5" data-testid="badge-hero">
-              Patented MohrO2 Technology
-            </Badge>
-            <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 text-foreground" data-testid="text-hero-title">
-              Don't Just Hydrate.{" "}
-              <span className="text-gradient-cyan">Oxygenate.</span>
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-8">
-              Premium oxygen-enriched water with 25mg/L dissolved O₂. Zero additives. Patented process. Fuel your performance, recovery, and clarity.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
-              <Link href="/store">
-                <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 h-12 text-base" data-testid="button-hero-shop">
-                  Shop Now <ArrowRight className="ml-2 h-4 w-4" />
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="text-center md:text-left">
+              <Badge variant="outline" className="mb-6 border-primary/30 text-primary font-medium px-4 py-1.5" data-testid="badge-hero">
+                Patented MohrO2 Technology
+              </Badge>
+              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl tracking-tight mb-6 text-foreground" data-testid="text-hero-title">
+                Don't Just Hydrate.{" "}
+                <span className="text-gradient-cyan">Oxygenate.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-8">
+                Premium oxygen-enriched water with 25mg/L dissolved O₂. Zero additives. Patented process. Fuel your performance, recovery, and clarity.
+              </p>
+              <div className="flex flex-col sm:flex-row items-center md:items-start gap-4 mb-12">
+                <Link href="/store">
+                  <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-8 h-12 text-base" data-testid="button-hero-shop">
+                    Shop Now <ArrowRight className="ml-2 h-4 w-4" />
+                  </Button>
+                </Link>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="font-semibold px-8 h-12 text-base"
+                  onClick={() => document.getElementById('science')?.scrollIntoView({ behavior: 'smooth' })}
+                  data-testid="button-hero-science"
+                >
+                  Our Science
                 </Button>
-              </Link>
-              <Button
-                size="lg"
-                variant="outline"
-                className="font-semibold px-8 h-12 text-base"
-                onClick={() => document.getElementById('science')?.scrollIntoView({ behavior: 'smooth' })}
-                data-testid="button-hero-science"
-              >
-                Our Science
-              </Button>
+              </div>
             </div>
+            <div className="relative flex justify-center">
+              <div className="relative w-72 md:w-96">
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl scale-110" />
+                <img
+                  src="/assets/io2-can-original.jpg"
+                  alt="iO2 Water Can"
+                  className="relative w-full h-auto drop-shadow-2xl"
+                  data-testid="img-hero-can"
+                />
+              </div>
+            </div>
+          </div>
 
-            {/* Trust stats */}
-            <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto">
-              <div className="text-center">
-                <div className="font-display font-bold text-2xl md:text-3xl text-primary" data-testid="text-stat-oxygen">25mg/L</div>
-                <div className="text-xs text-muted-foreground mt-1">Dissolved O₂</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display font-bold text-2xl md:text-3xl text-foreground" data-testid="text-stat-additives">Zero</div>
-                <div className="text-xs text-muted-foreground mt-1">Additives</div>
-              </div>
-              <div className="text-center">
-                <div className="font-display font-bold text-2xl md:text-3xl text-foreground" data-testid="text-stat-patent">Patented</div>
-                <div className="text-xs text-muted-foreground mt-1">MohrO2 Process</div>
-              </div>
+          {/* Trust stats */}
+          <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto mt-12">
+            <div className="text-center">
+              <div className="font-display font-bold text-2xl md:text-3xl text-primary" data-testid="text-stat-oxygen">25mg/L</div>
+              <div className="text-xs text-muted-foreground mt-1">Dissolved O₂</div>
+            </div>
+            <div className="text-center">
+              <div className="font-display font-bold text-2xl md:text-3xl text-foreground" data-testid="text-stat-additives">Zero</div>
+              <div className="text-xs text-muted-foreground mt-1">Additives</div>
+            </div>
+            <div className="text-center">
+              <div className="font-display font-bold text-2xl md:text-3xl text-foreground" data-testid="text-stat-patent">Patented</div>
+              <div className="text-xs text-muted-foreground mt-1">MohrO2 Process</div>
             </div>
           </div>
         </div>

@@ -45,8 +45,12 @@ export default function Cart() {
                   return (
                     <Card key={item.id} className="p-5 bg-card border-border" data-testid={`card-cart-item-${item.id}`}>
                       <div className="flex gap-4">
-                        <div className="w-20 h-20 bg-muted rounded-xl flex items-center justify-center flex-shrink-0">
-                          <Droplets className="h-8 w-8 text-primary/30" />
+                        <div className="w-20 h-20 bg-muted rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden">
+                          {item.product?.imageUrl ? (
+                            <img src={item.product.imageUrl} alt={item.product.name} className="w-full h-full object-cover" />
+                          ) : (
+                            <Droplets className="h-8 w-8 text-primary/30" />
+                          )}
                         </div>
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between gap-2">

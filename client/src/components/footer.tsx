@@ -14,8 +14,8 @@ export default function Footer() {
               </svg>
               <span className="font-display font-bold">iO<span className="text-primary">2</span></span>
             </div>
-            <p className="text-sm text-muted-foreground">Don't Just Hydrate. Oxygenate.</p>
-            <p className="text-xs text-muted-foreground mt-2">Powered by patented MohrO2 technology.</p>
+            <p className="text-sm text-muted-foreground">Next-Generation Functional Hydration.</p>
+            <p className="text-xs text-muted-foreground mt-2">Elevated dissolved oxygen hydration.</p>
           </div>
           <div>
             <h4 className="font-semibold text-sm mb-3">Shop</h4>
@@ -28,7 +28,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-sm mb-3">Company</h4>
             <div className="space-y-2">
-              <span className="block text-sm text-muted-foreground">About Oxira</span>
+              <span className="block text-sm text-muted-foreground">About iO2</span>
               <span className="block text-sm text-muted-foreground">Our Science</span>
               <span className="block text-sm text-muted-foreground">Lab Reports</span>
             </div>
@@ -43,7 +43,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">&copy; 2026 Oxira Inc. All rights reserved. iO2 Water is not intended to diagnose, treat, cure, or prevent any disease.</p>
+          <p className="text-xs text-muted-foreground">&copy; 2026 iO2 Water. All rights reserved. iO2 Water is not intended to diagnose, treat, cure, or prevent any disease.</p>
           <PerplexityAttribution />
         </div>
       </div>

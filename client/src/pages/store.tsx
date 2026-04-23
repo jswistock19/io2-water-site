@@ -7,10 +7,49 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Droplets, Star, ShoppingCart, Check } from "lucide-react";
+import { Droplets, Star, ShoppingCart, Check, Zap } from "lucide-react";
 import type { Product } from "@shared/schema";
 import { useState } from "react";
 import { getProductImage } from "@/lib/product-images";
+
+function IO2TechBadge() {
+  return (
+    <div className="absolute bottom-3 right-3 flex items-center gap-1 px-2 py-1 rounded-md"
+      style={{
+        background: "linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,20,30,0.85) 100%)",
+        backdropFilter: "blur(6px)",
+        border: "1px solid rgba(0,212,255,0.35)",
+        boxShadow: "0 0 10px rgba(0,212,255,0.15), inset 0 0 6px rgba(0,212,255,0.05)",
+      }}
+    >
+      <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+        <circle cx="5" cy="5" r="4" stroke="#00d4ff" strokeWidth="1" fill="none" />
+        <circle cx="5" cy="5" r="1.5" fill="#00d4ff" />
+      </svg>
+      <span style={{
+        fontFamily: "'Inter', 'SF Pro Display', system-ui, sans-serif",
+        fontWeight: 700,
+        fontSize: "9px",
+        letterSpacing: "0.12em",
+        color: "#fff",
+        lineHeight: 1,
+      }}>
+        iO<span style={{ color: "#00d4ff" }}>2</span>
+      </span>
+      <span style={{
+        fontFamily: "'Inter', 'SF Pro Display', system-ui, sans-serif",
+        fontWeight: 600,
+        fontSize: "8px",
+        letterSpacing: "0.18em",
+        color: "#00d4ff",
+        lineHeight: 1,
+        textTransform: "uppercase" as const,
+      }}>
+        TECH
+      </span>
+    </div>
+  );
+}
 
 function ProductCard({ product }: { product: Product }) {
   const { addToCart, isAdding } = useCart();
@@ -45,6 +84,7 @@ function ProductCard({ product }: { product: Product }) {
               <Badge className="bg-green-600 text-white text-xs whitespace-nowrap w-fit">Subscription</Badge>
             )}
           </div>
+          <IO2TechBadge />
         </div>
       </Link>
       <div className="p-5 flex flex-col flex-1">
